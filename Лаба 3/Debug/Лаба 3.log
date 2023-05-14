@@ -1,0 +1,7 @@
+﻿  MyForm.cpp
+D:\Job\Лаба 3\Лаба 3\MyForm.h(620,1): warning C4965: implicit box of integer 0; use nullptr or explicit cast
+D:\Job\Лаба 3\Лаба 3\MyForm.h(662,1): warning C4965: implicit box of integer 0; use nullptr or explicit cast
+D:\Job\Лаба 3\Лаба 3\MyForm.h(696,1): warning C4965: implicit box of integer 0; use nullptr or explicit cast
+D:\Job\Лаба 3\Лаба 3\MyForm.h(866): warning C4715: 'Лаба3::MyForm::getDateId': not all control paths return a value
+  AddressForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Лаба 3.vcxproj -> D:\Job\Лаба 3\Debug\Лаба 3.exe

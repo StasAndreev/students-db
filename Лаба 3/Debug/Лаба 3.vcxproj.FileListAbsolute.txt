@@ -1,0 +1,20 @@
+C:\Users\teren\source\repos\Лаба 3\Лаба 3\Debug\Лаба 3.vcxproj.AssemblyReference.cache
+C:\Users\teren\source\repos\Лаба 3\Лаба 3\Debug\Лаба3.MyForm.resources
+C:\Users\teren\source\repos\Лаба 3\Лаба 3\Debug\Лаба 3.vcxproj.GenerateResource.cache
+C:\Users\teren\source\repos\Лаба 3\Лаба 3\Debug\Лаба 3.vcxproj.CopyComplete
+E:\Лаба 3\Лаба 3\Debug\Лаба 3.vcxproj.AssemblyReference.cache
+E:\Лаба 3\Лаба 3\Debug\Лаба3.MyForm.resources
+E:\Лаба 3\Лаба 3\Debug\Лаба 3.vcxproj.GenerateResource.cache
+E:\Лаба 3\Лаба 3\Debug\Лаба 3.vcxproj.CopyComplete
+D:\Job\Фриланс\Лаба 3\Лаба 3\Debug\Лаба 3.vcxproj.AssemblyReference.cache
+D:\Job\Фриланс\Лаба 3\Лаба 3\Debug\Лаба 3.vcxproj.SuggestedBindingRedirects.cache
+D:\Job\Фриланс\Лаба 3\Лаба 3\Debug\Лаба3.MyForm.resources
+D:\Job\Фриланс\Лаба 3\Лаба 3\Debug\Лаба 3.vcxproj.GenerateResource.cache
+D:\Job\Фриланс\Лаба 3\Лаба 3\Debug\Лаба 3.vcxproj.CopyComplete
+D:\Job\Лаба 3\Лаба 3\Debug\Лаба 3.vcxproj.AssemblyReference.cache
+D:\Job\Лаба 3\Лаба 3\Debug\Лаба 3.vcxproj.SuggestedBindingRedirects.cache
+D:\Job\Лаба 3\Лаба 3\Debug\Лаба3.AddressForm.resources
+D:\Job\Лаба 3\Лаба 3\Debug\Лаба3.MyForm.resources
+D:\Job\Лаба 3\Лаба 3\Debug\Лаба3.SpecialtyForm.resources
+D:\Job\Лаба 3\Лаба 3\Debug\Лаба 3.vcxproj.GenerateResource.cache
+D:\Job\Лаба 3\Лаба 3\Debug\Лаба 3.vcxproj.CopyComplete

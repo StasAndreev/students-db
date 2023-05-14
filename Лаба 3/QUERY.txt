@@ -1,0 +1,44 @@
+CREATE TABLE date (
+	id INTEGER PRIMARY KEY,
+	day INTEGER NOT NULL ,
+	month INTEGER NOT NULL,
+	year INTEGER NOT NULL
+);
+
+CREATE TABLE address (
+	id INTEGER PRIMARY KEY,
+	street TEXT NOT NULL,
+	house TEXT NOT NULL,
+	room TEXT NOT NULL
+);
+
+CREATE TABLE specialty (
+	id INTEGER PRIMARY KEY,
+	name TEXT NOT NULL
+);
+
+CREATE TABLE student (
+	id INTEGER PRIMARY KEY,
+	name TEXT NOT NULL,
+	surname TEXT NOT NULL,
+	middlename TEXT,
+	date_id INTEGER,
+	address_id INTEGER,
+	specialty_id INTEGER,
+
+	FOREIGN KEY (date_id)
+		REFERENCES date (id),
+	FOREIGN KEY (address_id)
+		REFERENCES address (id),
+	FOREIGN KEY (specialty_id)
+		REFERENCES specialty (id)
+);
+
+SELECT student.id, student.name, student.surname, student.middlename,
+		(date.day || '/' || date.month || '/' || date.year),
+		(address.street || ', ' || address.house || ', ' || address.house),
+		specialty.name
+FROM student
+	JOIN date ON student.date_id == date.id
+	JOIN address ON student.address_id == address.id
+	JOIN specialty ON student.specialty_id == specialty.id;
