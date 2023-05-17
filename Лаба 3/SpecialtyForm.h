@@ -54,6 +54,7 @@ namespace Лаба3 {
 	private: System::Windows::Forms::Button^ btnDelete;
 
 	private: System::Windows::Forms::Button^ btnOk;
+	public: bool closeReasonIsChosen;
 
 	private: SQLiteConnection^ db;
 	private: System::Object^ id;
@@ -192,7 +193,6 @@ namespace Лаба3 {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(500, 400);
-			this->ControlBox = false;
 			this->Controls->Add(this->btnOk);
 			this->Controls->Add(this->btnDelete);
 			this->Controls->Add(this->lbChangeName);
@@ -204,6 +204,8 @@ namespace Лаба3 {
 			this->Controls->Add(this->tbChangeId);
 			this->Controls->Add(this->btnChange);
 			this->Controls->Add(this->btnAdd);
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
 			this->Name = L"SpecialtyForm";
 			this->Text = L"Специальность";
 			this->Load += gcnew System::EventHandler(this, &SpecialtyForm::SpecialtyForm_Load);
@@ -264,6 +266,7 @@ namespace Лаба3 {
 private: System::Void SpecialtyForm_Load(System::Object^ sender, System::EventArgs^ e)
 {
 	dview->DataSource = fillDataTable();
+	closeReasonIsChosen = false;
 }
 private: System::Void btnAdd_Click(System::Object^ sender, System::EventArgs^ e)
 {
@@ -338,6 +341,7 @@ private: System::Void btnOk_Click(System::Object^ sender, System::EventArgs^ e)
 	{
 		id = dview->CurrentRow->Cells["id"]->EditedFormattedValue;
 		name = dview->CurrentRow->Cells["Имя"]->EditedFormattedValue;
+		closeReasonIsChosen = false;
 		Close();
 	}
 	catch (Exception^ e)

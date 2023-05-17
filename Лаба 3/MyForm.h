@@ -659,7 +659,7 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	try
 	{
 		if (textBox1->Text == "" || textBox2->Text == "" || textBox3->Text == "" ||
-			idAddressAdd == NULL || idSpecialtyAdd == NULL) {
+			idAddressAdd == nullptr || idSpecialtyAdd == nullptr) {
 			MessageBox::Show("Заполните все поля", "Внимание");
 			return;
 		}
@@ -693,7 +693,7 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	try
 	{
 		if (textBox8->Text == "" || textBox9->Text == "" || textBox10->Text == "" ||
-			idAddressChange == NULL || idSpecialtyChange == NULL) {
+			idAddressChange == nullptr || idSpecialtyChange == nullptr) {
 			MessageBox::Show("Заполните все поля", "Внимание");
 			return;
 		}
@@ -784,8 +784,10 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: void onAddAddressFormClosed(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e)
 {
-	idAddressAdd = addressForm->getId();
-	textBox5->Text = addressForm->getFormattedValue();
+	if (addressForm->closeReasonIsChosen) {
+		idAddressAdd = addressForm->getId();
+		textBox5->Text = addressForm->getFormattedValue();
+	}
 }
 private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e)
 {
@@ -796,8 +798,10 @@ private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: void onChangeAddressFormClosed(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e)
 {
-	idAddressChange = addressForm->getId();
-	textBox12->Text = addressForm->getFormattedValue();
+	if (addressForm->closeReasonIsChosen) {
+		idAddressChange = addressForm->getId();
+		textBox12->Text = addressForm->getFormattedValue();
+	}
 }
 private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e)
 {
@@ -809,8 +813,10 @@ private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: void onAddSpecialtyFormClosed(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e)
 {
-	idSpecialtyAdd = specialtyForm->getId();
-	textBox6->Text = specialtyForm->getFormattedValue();
+	if (specialtyForm->closeReasonIsChosen){
+		idSpecialtyAdd = specialtyForm->getId();
+		textBox6->Text = specialtyForm->getFormattedValue();
+	}
 }
 private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e)
 {
@@ -821,8 +827,10 @@ private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: void onChangeSpecialtyFormClosed(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e)
 {
-	idSpecialtyChange = specialtyForm->getId();
-	textBox13->Text = specialtyForm->getFormattedValue();
+	if (specialtyForm->closeReasonIsChosen) {
+		idSpecialtyChange = specialtyForm->getId();
+		textBox13->Text = specialtyForm->getFormattedValue();
+	}
 }
 private: System::Object^ getDateId(DateTimePicker^ dtPicker)
 {

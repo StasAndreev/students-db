@@ -23,6 +23,8 @@ Assembly Microsoft.VisualC.STLCLR, Version=2.0.0.0, Culture=neutral, PublicKeyTo
 Class Лаба3.AddressForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean closeReasonIsChosen : Public
   Methods:
     setSqlConnection(SQLiteConnection): PrivateScope, Public, HideBySig
     getId(): PrivateScope, Public, HideBySig
@@ -30,6 +32,8 @@ Class Лаба3.AddressForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldIn
 Class Лаба3.SpecialtyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Boolean closeReasonIsChosen : Public
   Methods:
     setSqlConnection(SQLiteConnection): PrivateScope, Public, HideBySig
     getId(): PrivateScope, Public, HideBySig

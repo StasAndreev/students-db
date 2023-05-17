@@ -79,6 +79,7 @@ namespace Лаба3 {
 	private: System::Object^ street;
 	private: System::Object^ house;
 	private: System::Object^ flat;
+	public: bool closeReasonIsChosen;
 
 	public:
 
@@ -285,7 +286,6 @@ namespace Лаба3 {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(787, 383);
-			this->ControlBox = false;
 			this->Controls->Add(this->btnOk);
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
@@ -305,6 +305,8 @@ namespace Лаба3 {
 			this->Controls->Add(this->tbChangeId);
 			this->Controls->Add(this->btnChange);
 			this->Controls->Add(this->btnAdd);
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
 			this->Name = L"AddressForm";
 			this->Text = L"AddressForm";
 			this->Load += gcnew System::EventHandler(this, &AddressForm::AddressForm_Load);
@@ -365,6 +367,7 @@ namespace Лаба3 {
 private: System::Void AddressForm_Load(System::Object^ sender, System::EventArgs^ e)
 {
 	dview->DataSource = fillDataTable();
+	closeReasonIsChosen = false;
 }
 private: System::Void btnAdd_Click(System::Object^ sender, System::EventArgs^ e)
 {
@@ -443,6 +446,7 @@ private: System::Void btnOk_Click(System::Object^ sender, System::EventArgs^ e)
 		street = dview->CurrentRow->Cells["Улица"]->EditedFormattedValue;
 		house = dview->CurrentRow->Cells["Дом"]->EditedFormattedValue;
 		flat = dview->CurrentRow->Cells["Квартира"]->EditedFormattedValue;
+		closeReasonIsChosen = true;
 		Close();
 	}
 	catch (Exception^ e)
